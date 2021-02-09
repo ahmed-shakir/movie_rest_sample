@@ -29,7 +29,7 @@ public class MovieController {
     @GetMapping
     public ResponseEntity<List<Movie>> findAllMovies(@RequestParam(required = false) String title) {
         System.out.println("Title is available: " + !(title == null || title.isEmpty()));
-        System.out.println("Title: " + title);
+        System.out.println("Title: " + (title != null ? title : "N/A"));
         return ResponseEntity.ok(movieService.findAll(title));
     }
 }
