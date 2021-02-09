@@ -30,6 +30,7 @@ public class MovieController {
     public ResponseEntity<List<Movie>> findAllMovies(@RequestParam(required = false) String title) {
         System.out.println("Title is available: " + !(title == null || title.isEmpty()));
         System.out.println("Title: " + (title != null ? title : "N/A"));
+        System.out.println("Test...");
         return ResponseEntity.ok(movieService.findAll(title));
     }
 }
