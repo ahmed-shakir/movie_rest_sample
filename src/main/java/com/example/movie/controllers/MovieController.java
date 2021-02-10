@@ -33,8 +33,7 @@ public class MovieController {
         var codeString = "Code: " + (title != null ? title.substring(0, 1).toUpperCase() + "123" : "1234");
 
         System.out.println(isTitleAvailableString);
-        System.out.println(titleString);
-        System.out.println(codeString);
+        System.out.println(titleString + " " + codeString);
 
         return ResponseEntity.ok(movieService.findAll(title));
     }
