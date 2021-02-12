@@ -1,0 +1,19 @@
+# This workflow will check the source code and make sure that it follows the Google Java Style Guide
+# For more information see: https://google.github.io/styleguide/javaguide.html
+# and https://github.com/marketplace/actions/run-java-checkstyle
+
+name: Java code style check
+on: pull_request
+
+jobs:
+  checkstyle_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run check on sourcecode
+        uses: nikitasavinov/checkstyle-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: 'github-pr-check'
+          tool_name: 'testtool'
