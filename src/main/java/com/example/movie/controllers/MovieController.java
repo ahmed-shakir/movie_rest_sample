@@ -14,7 +14,9 @@ import com.example.movie.services.MovieService;
 import lombok.RequiredArgsConstructor;
 
 /**
- * <description>
+ * Movie API
+ * <p>
+ * Currently movie search is the only feature and is accessible trough the endpoint /api/v1/movies
  *
  * @author Ahmed Shakir
  * @version 1.0
